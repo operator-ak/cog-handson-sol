@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Remove the Comments and fill in relevant code -->
+  <!-- Write code wherever necessary  -->
+  <!-- Do specify all the component-ids (incl. div ids) correctly for your code to get evaluated successfully -->
+  <!-- Most importantly, evaluate your solution without 'syntax errors' in javascript -->
+
+  <title>We-Host Server Resellers - Purchase Entry</title>
+  <script src="script.js" type="text/javascript">  </script>
+  <style>
+    input[type="text"] {
+      width: 97%;
+    }
+
+    input[type="number"] {
+      width: 97%;
+    }
+
+    input[type="tel"] {
+      width: 97%;
+    }
+
+    body {
+      background-image: url('WEHOST.jpg');
+      background-size: 100%;
+      font-weight: bold;
+    }
+
+    div {
+      font-size: 20px;
+      color: #FFFFFF;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h3 {
+      color: #FFFFFF;
+      background-color: #000080;
+      margin-left: 25%;
+      margin-right: auto;
+      text-align: center;
+      width: 50%;
+      font-family: Verdana;
+      padding: 5px;
+      border-radius: 6px;
+    }
+
+    table,
+    td,
+    tr {
+      border: solid 1px;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      border-spacing: 1px;
+      border-radius: 6px;
+      color: #000080;
+      background-color: #FFFFFF;
+      padding: 1px;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #808080;
+    }
+
+    #submit {
+      color: #FFFFFF;
+      background-color: #000080;
+      margin-left: 25%;
+      margin-right: auto;
+      padding: 5px;
+      width: 50%;
+      font-family: Verdana;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h3>We-Host Server Resellers - Purchase Entry</h3>
+  <form onsubmit="return calculatePurchaseCost()">
+    <table>
+      <tr>
+        <td>Purchase Date</td>
+        <td><input type="text" name="pdate" id="pdate" required onfocus="today()" /></td>
+      </tr>
+      <tr>
+        <td>Customer Name</td>
+        <td><input type="text" name="cname" id="cname" placeholder="Enter the customer name" pattern="[ a-zA-Z]+"
+            required /></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><textarea name="address" id=address rows="4" cols="50" placeholder="Enter the address" required></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>Phone Number</td>
+        <td><input type="text" name="phno" id="phno" placeholder="Phone number" pattern="[7-9]{1}[0-9]{9}" required />
+        </td>
+      </tr>
+      <tr>
+        <td>Server Type</td>
+        <td><select name="stype" id="stype" required>
+            <option value="Select Server Type..">Select Server Type..</option>
+            <option value="Dedicated Server">Dedicated Server</option>
+            <option value="VPS">VPS</option>
+            <option value="Storage Server">Storage Server</option>
+            <option value="Database Server">Database Server</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>CPU(Core)</td>
+        <td><select name="model" id="model" required>
+            <option value="Select no of cores..">Select no of cores..</option>
+            <option value="2 cores">2 cores</option>
+            <option value="4 cores">4 cores</option>
+            <option value="6 cores">6 cores</option>
+            <option value="8 cores">8 cores</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Configuration</td>
+        <td><select name="configuration" id="configuration" required>
+            <option value="Select configuration..">Select configuration..</option>
+            <option value="4 GB RAM , 300 GB SSD-boosted Disk Storage">4 GB RAM , 300 GB SSD-boosted Disk Storage
+            </option>
+            <option value="10 GB RAM , 700 GB SSD-boosted Disk Storage">10 GB RAM , 700 GB SSD-boosted Disk Storage
+            </option>
+            <option value="20 GB RAM , 1400 GB SSD-boosted Disk Storage">20 GB RAM , 1400 GB SSD-boosted Disk Storage
+            </option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Prepayment Period (in months)</td>
+        <td><select name="period" id="period" required>
+            <option value="Select prepayment period..">Select prepayment period..</option>
+            <option value="1 month">1 month</option>
+            <option value="3 months">3 months</option>
+            <option value="6 months">6 months</option>
+            <option value="12 months">12 months</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Purchase Cost</td>
+        <td><input type="range" name="cost" id="cost" value="" min="900" max="5000" onchange="show_value(this.value);"
+            required />
+          <span id="demo"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Payment Type</td>
+        <td><select name="ptype" id="ptype" required>
+            <option value="Card">Debit card / Credit card</option>
+            <option value="Cash">Cash</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Card No</td>
+        <td><input type="text" name="cardno" id="cardno" placeholder="Enter the card no"
+            pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" /></td>
+      </tr>
+      <tr>
+        <td>Expiry Date</td>
+        <td><input type="date" name="edate" id="edate" placeholder="Enter the expiry date" /></td>
+      </tr>
+      <tr>
+        <td>Tax %</td>
+        <td><input type="number" name="tax" id="tax" placeholder="“Enter the tax %" required /></td>
+      </tr>
+    </table>
+
+    <br /><br />
+    <input type="submit" name="submit" id="submit" value="CONFIRM PURCHASE" />
+    <br /><br />
+
+    <div id="result"> </div>
+    <br /><br />
+
+  </form>
+</body>
+
+</html>
