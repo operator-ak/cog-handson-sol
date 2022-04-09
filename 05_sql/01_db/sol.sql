@@ -47,3 +47,33 @@ select c.car_id, c.car_name, o.owner_id from cars c
 join owners o on c.owner_id = o.owner_id
 where c.car_type in ('Hatchback', 'SUV')
 order by car_id;
+
+-- 10. Concatenating Details
+select concat(address, ', ', city) as Address from student
+order by 1 desc;
+
+-- 11. Hotels that took order based on month
+select distinct h.hotel_id, h.hotel_name, h.rating from orders o
+join hotel_details h on o.hotel_id = h.hotel_id
+where o.order_date between '2019-07-01' and '2019-07-31'
+order by h.hotel_id;
+
+-- 12. Hotel_info
+select concat(hotel_name, ' is a', hotel_type, ' hotel') as HOTEL_INFO from hotel_details 
+order by 1 desc;
+
+-- 13. Rental details based on date
+select rental_id, car_id, customer_id, km_driven from rentals
+where pickup_date between '2019-08-01' and '2019-08-30'
+and return_date between '2019-08-01' and '2019-08-30'
+order by rental_id;
+
+-- 14. Password Generation
+select name, concat(substr(name, 1,3), substr(convert(phno, char), 1,3)) as password from users
+order by name;
+
+-- 15. Customer using HDFC bank
+select distinct u.name, u.address from users u 
+join bookingdetails b on u.user_id = b.user_id
+where 'HDFC' not in (select b_in.name from bookingdetails b_in where u.user_id = b_in.user_id)
+order by 1;
