@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        try (Scanner in = new Scanner(System.in)) {
+            System.out.println("Enter no of bookings:");
+            int noOfBookings = in.nextInt();
+
+            System.out.println("Enter the available tickets:");
+            int availableTickets = in.nextInt();
+
+            Ticket.setAvailableTickets(availableTickets);
+
+            for (int i = 0; i < noOfBookings; i++) {
+                System.out.println("Enter the ticketid:");
+                int ticketid = in.nextInt();
+
+                System.out.println("Enter the price:");
+                int price = in.nextInt();
+
+                System.out.println("Enter the no of tickets:");
+                int noOfTickets = in.nextInt();
+
+                Ticket ticket = new Ticket();
+
+                ticket.setTicketid(ticketid);
+                ticket.setPrice(price);
+
+                System.out.println("Available tickets: " + Ticket.getAvailableTickets());
+                System.out.println("Total amount:" + ticket.calculateTicketCost(noOfTickets));
+                System.out.println("Available tickets after booking:" + Ticket.getAvailableTickets());
+            }
+        }
+    }
+}
