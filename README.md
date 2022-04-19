@@ -19,3 +19,9 @@
 7. [Account Manipulation - Abstract Class](./07_java/02_oops/07_account_manipulation/)
 8. [Register a Candidate - User defined Exception(with throw and throws)](./07_java/02_oops/08_register_a_candidate/)
 9. [Array Manipulation - Use try with multi catch](./07_java/02_oops/09_array_manipulation/)
+
+## Collections Framework
+
+1. [Number of New Words](./07_java/03_collections_framework/01_number_of_new_words/)
+2. [Insurance Bazaar](./07_java/03_collections_framework/02_insurance_bazaar/)
+3. [PhoneBook Manipulation](./07_java/03_collections_framework/03_phonebook_manipulation/)
