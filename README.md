@@ -17,3 +17,5 @@
 5. [Employee Loan Eligibility - Polymorphism](./07_java/02_oops/05_employee_loan_eligibility/)
 6. [Vehicle-Loan-Insurance - User Interface](./07_java/02_oops/06_vehicle_loan_insurance/)
 7. [Account Manipulation - Abstract Class](./07_java/02_oops/07_account_manipulation/)
+8. [Register a Candidate - User defined Exception(with throw and throws)](./07_java/02_oops/08_register_a_candidate/)
+9. [Array Manipulation - Use try with multi catch](./07_java/02_oops/09_array_manipulation/)

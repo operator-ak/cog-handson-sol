@@ -1,7 +1,13 @@
-public class Account {
-  private int accountNumber;
-  private Customer customerObj;
-  private double balance;
+public abstract class Account {
+  protected int accountNumber;
+  protected Customer customerObj;
+  protected double balance;
+
+  public Account(int accountNumber, Customer customerObj, double balance) {
+    this.accountNumber = accountNumber;
+    this.customerObj = customerObj;
+    this.balance = balance;
+  }
 
   public int getAccountNumber() {
     return accountNumber;
@@ -26,5 +32,7 @@ public class Account {
   public void setBalance(double balance) {
     this.balance = balance;
   }
+
+  public abstract boolean withdraw(double amount);
 
 }
