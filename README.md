@@ -25,3 +25,13 @@
 1. [Number of New Words](./07_java/03_collections_framework/01_number_of_new_words/)
 2. [Insurance Bazaar](./07_java/03_collections_framework/02_insurance_bazaar/)
 3. [PhoneBook Manipulation](./07_java/03_collections_framework/03_phonebook_manipulation/)
+
+## Advanced Java Concepts
+
+1. [Auditing](./07_java/04_advance_java_concepts/01_auditing/)
+2. [Travel Agency](./07_java/04_advance_java_concepts/02_travel_agency/)
+3. [Validate Name](./07_java/04_advance_java_concepts/03_validate_name/)
+4. [Retriving Data from file](./07_java/04_advance_java_concepts/04_retrieving_data_from_file/)
+5. [Mall Parking System](./07_java/04_advance_java_concepts/05_mall_parking_system/)
+6. [Employee Loan Eligibility](./07_java/04_advance_java_concepts/06_employee_loan_eligibility/)
+7. [Placement Enrollment Count](./07_java/04_advance_java_concepts/07_placement_enrollment_count/)
