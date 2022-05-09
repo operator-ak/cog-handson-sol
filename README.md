@@ -35,3 +35,8 @@
 5. [Mall Parking System](./07_java/04_advance_java_concepts/05_mall_parking_system/)
 6. [Employee Loan Eligibility](./07_java/04_advance_java_concepts/06_employee_loan_eligibility/)
 7. [Placement Enrollment Count](./07_java/04_advance_java_concepts/07_placement_enrollment_count/)
+8. [Fruit Basket Estimation](./07_java/04_advance_java_concepts/08_fruit_basket_estimation/)
+9. [Employee Promotion](07_java%5C04_advance_java_concepts%5C09_employee_promotion)
+10. [Add Flight Using JDBC](07_java%5C04_advance_java_concepts%5C10_add_flight_using_jdbc)
+11. [Search For Trains JDBC](07_java%5C04_advance_java_concepts%5C11_search_for_trains_jdbc)
+12. [Player Selection System](07_java%5C04_advance_java_concepts%5C12_player_selection_system_jdbc)
