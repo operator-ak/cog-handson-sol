@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c" xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+  <bean id="custObj" name="custObj" class="com.springcore.Customer">
+    <constructor-arg value="1"/>
+    <constructor-arg value="Name"/>
+    <constructor-arg value="email@test.com"/>
+    <constructor-arg value="1234567890"/>
+  </bean>
+
+  <bean name="membershipObj" class="com.springcore.MemberShip">
+    <constructor-arg value="1"/>
+    <constructor-arg value="Premium"/>
+    <constructor-arg value="10"/>
+    <constructor-arg ref="custObj"/>
+  </bean>
+</beans>
